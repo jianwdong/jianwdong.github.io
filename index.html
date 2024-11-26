@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jian Dong - Radiologist & Data Scientist</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #2d3748;
+            --secondary-color: #4a5568;
+            --accent-color: #4299e1;
+            --background-color: #f7fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--primary-color);
+        }
+
+        header {
+            background-color: white;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 4rem 0;
+        }
+
+        .about-section h2 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-section p {
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: white;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h2>JD</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Dr. Jian Dong</h1>
+            <p>Diagnostic Radiologist & Data Scientist</p>
+            <div class="social-links">
+                <a href="https://github.com/jianwdong" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jianwdong/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/jianwdong" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="mailto:jianwdong@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p>I'm a diagnostic radiologist (nuclear subspecialty) and a data scientist. I have a faculty appointment at the Geisel School of Medicine at Dartmouth, where I practice part-time. Broadly, I am interested in machine learning applications in medicine and healthcare.</p>
+            
+            <p>Prior to my current roles, I earned my bachelor's in MechE at Columbia, medical school at NYU, a preliminary medicine year at Mount Sinai, radiology residency at BWH/Harvard together with a nuclear medicine fellowship. I am also finishing up my master's in data science at UT Austin. Before medicine, I did dabbled in astrophysics, experimental fluid mechanics, and computational neuroscience. I remain a tinkerer at heart.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Dr. Jian Dong. All rights reserved.</p>
+    </footer>
+</body>
+</html>
