@@ -40,8 +40,13 @@
             align-items: center;
         }
 
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
         .nav-links a {
-            margin-left: 2rem;
             text-decoration: none;
             color: var(--secondary-color);
             transition: color 0.3s ease;
@@ -49,6 +54,70 @@
 
         .nav-links a:hover {
             color: var(--accent-color);
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .dropdown-toggle:hover {
+            color: var(--accent-color);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--background-color);
+            color: var(--accent-color);
+        }
+
+        /* Arrow rotation */
+        .dropdown:hover .dropdown-toggle i {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-toggle i {
+            transition: transform 0.3s ease;
         }
 
         main {
@@ -115,6 +184,19 @@
             background-color: white;
             margin-top: 4rem;
         }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .dropdown-menu {
+                right: auto;
+                left: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -125,6 +207,17 @@
             </div>
             <div class="nav-links">
                 <a href="#about">About</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        Calculator
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="https://jianwdong.github.io/diagnostic-calculator/" target="_blank" class="dropdown-item">
+                            Diagnostic Calculator
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
